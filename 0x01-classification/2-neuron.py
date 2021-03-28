@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 import numpy as np
-
-
 class Neuron:
 
 
@@ -11,7 +9,7 @@ class Neuron:
         elif nx < 1:
             raise ValueError('nx must be a positive integer')
         else:
-            self.__W = np.random.randn(1,2)*0.01 
+            self.W=np.random.normal(size=(1, nx))
             self.__b = 0
             self.__A = 0
 
