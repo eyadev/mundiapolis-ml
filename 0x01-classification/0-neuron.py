@@ -6,11 +6,11 @@ class Neuron:
 
     
     def __init__(self, nx):
-        if type(nx) != int:
+        if type(nx)!= int:
             raise TypeError("nx must be an integer")
-        elif nx < 1:
+        elif nx<1:
             raise ValueError("nx must be a positive integer")
         else:    
-        self.w=np.random.randn(1,2)*0.01 
+        self.w=np.random.normal(size=(1, nx))
         self.b=0
         self.A=0   
